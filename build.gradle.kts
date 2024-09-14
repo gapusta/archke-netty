@@ -3,13 +3,14 @@ plugins {
 }
 
 group = "edu.myrza"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    implementation("io.netty:netty-all:4.1.113.Final")
     testImplementation("org.jetbrains.kotlin:kotlin-test")
 }
 
