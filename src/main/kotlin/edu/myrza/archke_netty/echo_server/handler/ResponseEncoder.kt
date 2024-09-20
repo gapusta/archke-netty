@@ -1,4 +1,4 @@
-package edu.myrza.archke_netty.handler
+package edu.myrza.archke_netty.echo_server.handler
 
 import io.netty.buffer.ByteBuf
 import io.netty.buffer.Unpooled

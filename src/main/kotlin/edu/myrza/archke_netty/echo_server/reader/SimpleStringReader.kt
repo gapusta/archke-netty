@@ -1,6 +1,6 @@
-package edu.myrza.archke_netty.reader
+package edu.myrza.archke_netty.echo_server.reader
 
-import edu.myrza.archke_netty.reader.SimpleStringReader.State.*
+import edu.myrza.archke_netty.echo_server.reader.SimpleStringReader.State.*
 
 class SimpleStringReader {
 

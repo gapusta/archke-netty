@@ -1,6 +1,6 @@
-package edu.myrza.archke_netty.handler
+package edu.myrza.archke_netty.echo_server.handler
 
-import edu.myrza.archke_netty.reader.SimpleStringReader
+import edu.myrza.archke_netty.echo_server.reader.SimpleStringReader
 import io.netty.buffer.ByteBuf
 import io.netty.channel.ChannelHandlerContext
 import io.netty.handler.codec.ByteToMessageDecoder

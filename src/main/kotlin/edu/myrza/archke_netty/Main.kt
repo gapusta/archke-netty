@@ -1,8 +1,8 @@
 package edu.myrza.archke_netty
 
-import edu.myrza.archke_netty.handler.EchoHandler
-import edu.myrza.archke_netty.handler.RequestDecoder
-import edu.myrza.archke_netty.handler.ResponseEncoder
+import edu.myrza.archke_netty.echo_server.handler.EchoHandler
+import edu.myrza.archke_netty.echo_server.handler.RequestDecoder
+import edu.myrza.archke_netty.echo_server.handler.ResponseEncoder
 import io.netty.bootstrap.ServerBootstrap
 import io.netty.channel.ChannelInitializer
 import io.netty.channel.ChannelOption
@@ -11,7 +11,10 @@ import io.netty.channel.socket.SocketChannel
 import io.netty.channel.socket.nio.NioServerSocketChannel
 
 fun main() {
-    println("main started...")
+    echoServer()
+}
+
+fun echoServer() {
     val bossGroup = NioEventLoopGroup()
     val workerGroup = NioEventLoopGroup()
 
@@ -25,7 +28,8 @@ fun main() {
                         channel.pipeline().addLast(RequestDecoder(), ResponseEncoder(), EchoHandler())
                     }
                 }
-            ).option(ChannelOption.SO_BACKLOG, 128)
+            )
+            .option(ChannelOption.SO_BACKLOG, 128)
             .childOption(ChannelOption.SO_KEEPALIVE, true)
 
         val future = bootstrap.bind(9999).sync()
