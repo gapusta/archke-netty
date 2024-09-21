@@ -1,7 +1,7 @@
 package edu.myrza.archke_netty.server.io
 
 import edu.myrza.archke.server.controller.parser.Reader
-import edu.myrza.archke_netty.server.io.dto.ByteArrays
+import edu.myrza.archke_netty.server.io.util.ByteArrays
 import io.netty.buffer.ByteBuf
 import io.netty.channel.ChannelHandlerContext
 import io.netty.handler.codec.ByteToMessageDecoder
@@ -14,7 +14,7 @@ class RequestDecoder : ByteToMessageDecoder() {
     override fun decode(
         ctx: ChannelHandlerContext,
         buff: ByteBuf,
-        out: MutableList<Any>
+        out: MutableList<Any> // if 'out' is empty, next handler will not be triggered
     ) {
         while (buff.readableBytes() > 0) {
             val bytesToProcess = minOf(input.size, buff.readableBytes())
@@ -26,7 +26,9 @@ class RequestDecoder : ByteToMessageDecoder() {
 
         if (!reader.done()) return
 
-        out.add(ByteArrays(reader.payload()))
+        val request = ByteArrays(reader.payload())
+
+        out.add(request)
 
         reader = Reader()
     }
