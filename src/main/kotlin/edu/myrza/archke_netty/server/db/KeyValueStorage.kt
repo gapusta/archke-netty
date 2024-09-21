@@ -1,4 +1,4 @@
-package edu.myrza.archke.server.db
+package edu.myrza.archke_netty.server.db
 
 interface KeyValueStorage {
 

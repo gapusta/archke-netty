@@ -1,6 +1,6 @@
 package edu.myrza.archke_netty.server.io
 
-import edu.myrza.archke.server.controller.parser.Reader
+import edu.myrza.archke_netty.server.controller.parser.Reader
 import edu.myrza.archke_netty.server.io.util.ByteArrays
 import io.netty.buffer.ByteBuf
 import io.netty.channel.ChannelHandlerContext

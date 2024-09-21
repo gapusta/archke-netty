@@ -1,7 +1,7 @@
 package edu.myrza.archke_netty
 
 import edu.myrza.archke.server.Archke
-import edu.myrza.archke.server.config.ArchkeConfig
+import edu.myrza.archke_netty.server.config.ArchkeConfig
 import edu.myrza.archke_netty.echo_server.handler.EchoHandler
 import edu.myrza.archke_netty.echo_server.handler.RequestDecoder
 import edu.myrza.archke_netty.echo_server.handler.ResponseEncoder

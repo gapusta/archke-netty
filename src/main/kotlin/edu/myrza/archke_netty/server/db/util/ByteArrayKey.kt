@@ -1,4 +1,4 @@
-package edu.myrza.archke.server.db.util
+package edu.myrza.archke_netty.server.db.util
 
 class ByteArrayKey(private val array: ByteArray) {
 

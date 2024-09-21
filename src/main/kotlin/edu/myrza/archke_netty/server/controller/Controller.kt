@@ -1,4 +1,4 @@
-package edu.myrza.archke.server.controller
+package edu.myrza.archke_netty.server.controller
 
 interface Controller {
 

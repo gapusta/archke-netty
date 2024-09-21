@@ -1,4 +1,4 @@
-package edu.myrza.archke.server.command
+package edu.myrza.archke_netty.server.command
 
 interface Command {
 

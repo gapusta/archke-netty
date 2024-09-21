@@ -1,9 +1,9 @@
 package edu.myrza.archke.server
 
-import edu.myrza.archke.server.command.*
-import edu.myrza.archke.server.config.ArchkeConfig
-import edu.myrza.archke.server.controller.ControllerImpl
-import edu.myrza.archke.server.db.KeyValueStorageImpl
+import edu.myrza.archke_netty.server.config.ArchkeConfig
+import edu.myrza.archke_netty.server.controller.ControllerImpl
+import edu.myrza.archke_netty.server.db.KeyValueStorageImpl
+import edu.myrza.archke_netty.server.command.*
 import edu.myrza.archke_netty.server.io.Processor
 import edu.myrza.archke_netty.server.io.RequestDecoder
 import edu.myrza.archke_netty.server.io.ResponseEncoder

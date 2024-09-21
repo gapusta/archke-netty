@@ -1,6 +1,6 @@
-package edu.myrza.archke.server.db
+package edu.myrza.archke_netty.server.db
 
-import edu.myrza.archke.server.db.util.ByteArrayKey
+import edu.myrza.archke_netty.server.db.util.ByteArrayKey
 
 class KeyValueStorageImpl : KeyValueStorage {
 

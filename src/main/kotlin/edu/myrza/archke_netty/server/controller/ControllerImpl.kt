@@ -1,6 +1,6 @@
-package edu.myrza.archke.server.controller
+package edu.myrza.archke_netty.server.controller
 
-import edu.myrza.archke.server.command.Command
+import edu.myrza.archke_netty.server.command.Command
 
 class ControllerImpl(private val commands: Map<String, Command>) : Controller {
 

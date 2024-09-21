@@ -1,6 +1,6 @@
-package edu.myrza.archke.server.command
+package edu.myrza.archke_netty.server.command
 
-import edu.myrza.archke.server.db.KeyValueStorage
+import edu.myrza.archke_netty.server.db.KeyValueStorage
 
 class DelCommand(private val storage: KeyValueStorage) : Command {
 
