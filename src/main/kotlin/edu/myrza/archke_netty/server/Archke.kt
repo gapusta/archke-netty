@@ -10,9 +10,9 @@ import edu.myrza.archke_netty.server.io.ResponseEncoder
 import io.netty.bootstrap.ServerBootstrap
 import io.netty.channel.ChannelInitializer
 import io.netty.channel.ChannelOption
-import io.netty.channel.nio.NioEventLoopGroup
+import io.netty.channel.epoll.EpollEventLoopGroup
+import io.netty.channel.epoll.EpollServerSocketChannel
 import io.netty.channel.socket.SocketChannel
-import io.netty.channel.socket.nio.NioServerSocketChannel
 
 class Archke(private val archkeConfig: ArchkeConfig) {
 
@@ -30,11 +30,11 @@ class Archke(private val archkeConfig: ArchkeConfig) {
         val controller = ControllerImpl(commands)
 
         // IO LAYER
-        val group = NioEventLoopGroup(1)
+        val group = EpollEventLoopGroup(1)
         try {
             val bootstrap = ServerBootstrap()
             bootstrap.group(group)
-                .channel(NioServerSocketChannel::class.java)
+                .channel(EpollServerSocketChannel::class.java)
                 .childHandler(
                     object : ChannelInitializer<SocketChannel>() {
                         override fun initChannel(channel: SocketChannel) {
